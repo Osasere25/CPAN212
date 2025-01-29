@@ -20,8 +20,8 @@ router.get('/add', (req, res) => {
 });
 
 router.get ('/calculate', (req, res) => {
-    const a = Number(req.query.a);
-    const b = Number(req.query.b);
+    const a = parseFloat(req.query.a);
+    const b = parseFloat(req.query.b);
     const operation = req.query.operation;
 
     if (isNaN(a) || isNaN(b)) {
@@ -30,11 +30,11 @@ router.get ('/calculate', (req, res) => {
 
     let result;
     switch(operation){
-        case '+':
-            result = a + b;
-            break;
         case '-':
             result = a - b;
+            break;
+        case '+':
+            result = a + b;
             break;
         case '*':
             result = a * b;
