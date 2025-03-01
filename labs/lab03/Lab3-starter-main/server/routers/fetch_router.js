@@ -12,6 +12,7 @@ const __dirname = path.dirname(__filename); // this will link us to the router f
 // we need to move from /server/routers to /server/uploads
 const upload_directory = path.join(__dirname, "../uploads");
 
+
 router.get("/single", (req, res) => {
   // we read the directory items synchronously to not trip the async speed
   let files_array = fs.readdirSync(upload_directory);
