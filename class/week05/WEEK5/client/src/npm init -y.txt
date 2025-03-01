@@ -1,0 +1,8 @@
+npm init -y
+npm i express nodemon
+
+npm create vite@lastest .
+
+
+
+npm install --save multer
